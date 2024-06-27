@@ -14,3 +14,38 @@
  *= require_self
  */
  @import "bootstrap";
+
+ body {
+    font-family: Arial, sans-serif;
+    background: #272727 !important;
+    color: #fff !important;
+}
+
+.navbar-brand, .nav-link {
+    color: white !important;
+}
+
+.alert {
+    background: #ff5400;
+}
+
+.navbar-nav .nav-link {
+    margin-right: 15px;
+}
+
+.txt-color {
+    color: black;
+    justify-content: space-around;
+}
+
+.bg {
+    background-color: rgba(0, 0, 0, .75) !important;
+}
+
+.card {
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
