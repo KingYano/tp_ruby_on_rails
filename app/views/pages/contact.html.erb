@@ -1,18 +1,18 @@
 <div class="container mt-5">
   <h1>Contactez-nous</h1>
-  <form action="#" method="post">
+  <%= form_with url: contact_path, method: :post, local: true do |form| %>
     <div class="form-group">
-      <label for="name">Nom:</label>
-      <input type="text" class="form-control" id="name" placeholder="Votre nom" name="name">
+      <%= form.label :name, "Nom:" %>
+      <%= form.text_field :name, class: "form-control", placeholder: "Votre nom" %>
     </div>
     <div class="form-group">
-      <label for="email">Email:</label>
-      <input type="email" class="form-control" id="email" placeholder="Votre email" name="email">
+      <%= form.label :email, "Email:" %>
+      <%= form.email_field :email, class: "form-control", placeholder: "Votre email" %>
     </div>
     <div class="form-group">
-      <label for="message">Message:</label>
-      <textarea class="form-control" id="message" placeholder="Votre message" name="message"></textarea>
+      <%= form.label :message, "Message:" %>
+      <%= form.text_area :message, class: "form-control", placeholder: "Votre message" %>
     </div>
-    <button type="submit" class="btn btn-primary">Envoyer</button>
-  </form>
+    <%= form.submit "Envoyer", class: "btn btn-primary" %>
+  <% end %>
 </div>
